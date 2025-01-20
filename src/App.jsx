@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Task from './component/Task'
 import TaskList from './component/TaskList'
+import ParticlesComponent from './component/particles.jsx';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -39,6 +40,7 @@ const App = () => {
 
   return (
     <div className='h-[calc(100%-128px)] w-full flex justify-center items-center my-16'>
+      <ParticlesComponent />
       <div className='rounded-[40px] h-auto px-28 py-14 bg-[#fefefe] w-1/2'>
         <Task onAddTask={handleAddTask} taskLen={tasks.length - count}/>
         <TaskList tasks={tasks} onToggleTask={toggleTaskCompletion} onDeleteTask={deleteTask}/>
